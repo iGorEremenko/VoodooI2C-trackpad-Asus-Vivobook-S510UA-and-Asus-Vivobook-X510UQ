@@ -9,7 +9,6 @@
 
 #include "VoodooI2CCSGestureEngine.hpp"
 #include "../VoodooI2CMultitouchInterface.hpp"
-
 #define super VoodooI2CMultitouchEngine
 OSDefineMetaClassAndStructors(VoodooI2CCSGestureEngine, VoodooI2CMultitouchEngine);
 
@@ -323,6 +322,8 @@ bool VoodooI2CCSGestureEngine::ProcessScroll(csgesture_softc *sc, int abovethres
 }
 
 bool VoodooI2CCSGestureEngine::ProcessTwoFingerZoom(csgesture_softc *sc, int abovethreshold, int iToUse[4]) {
+    if (!sc->settings.trackpadPich)
+        return false;
     if (abovethreshold == 2) {
         //get position
         int i1 = iToUse[0];
@@ -350,6 +351,7 @@ bool VoodooI2CCSGestureEngine::ProcessTwoFingerZoom(csgesture_softc *sc, int abo
             update_keyboard(cmdKey, keyCodes);
             sc->zoomValue = zoomValue;
             sc->zoomStick = 0;
+            sc->zoomTapStick[3] = false;
         }
         return sc->zooming;
     }

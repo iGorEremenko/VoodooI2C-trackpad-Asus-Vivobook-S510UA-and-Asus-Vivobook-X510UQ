@@ -10,6 +10,7 @@ struct csgesture_settings { //note not all settings were brought over from Windo
     bool multiFingerTap;
     bool tapDragEnabled;
     bool display_integrated = false;
+    bool trackpadPich = false;
     bool literal_right_click = false;
 };
 
@@ -84,6 +85,8 @@ struct csgesture_softc {
     
     int zoomValue;
     int zoomStick;
+    bool zoomTapStick[4];
+    int Ztimer;
     bool zooming;
     
     int tick[15];

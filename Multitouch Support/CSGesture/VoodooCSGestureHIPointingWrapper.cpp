@@ -173,6 +173,17 @@ IOReturn VoodooCSGestureHIPointingWrapper::setParamProperties(OSDictionary *dict
         
     }
     
+    OSBoolean *pinching = OSDynamicCast(OSBoolean, dict->getObject("TrackpadPinch"));
+    if (pinching){
+        gesturerec->softc.settings.trackpadPich = pinching->isTrue();
+    } else {
+        OSNumber *pinchingNum = OSDynamicCast(OSNumber, dict->getObject("TrackpadPinch"));
+        if (pinchingNum) {
+            gesturerec->softc.settings.trackpadPich = pinchingNum->unsigned32BitValue() & 0x1;
+        }
+        
+    }
+    
     OSBoolean *hscroll  = OSDynamicCast(OSBoolean, dict->getObject("TrackpadHorizScroll"));
     if (hscroll){
         horizontalScroll = hscroll->isTrue();
