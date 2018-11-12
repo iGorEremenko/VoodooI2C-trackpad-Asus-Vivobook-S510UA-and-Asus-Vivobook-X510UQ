@@ -1,3 +1,5 @@
+Read in Russian (https://github.com/iGorEremenko/VoodooI2C-trackpad-Asus-Vivobook-S510UA-and-Asus-Vivobook-X510UQ/blob/master/README-rus.md)
+
 # Better Scroll VoodooI2C
 > Fork of [VoodooI2C](https://github.com/pqml/VoodooI2C) to fix some gesture for ASUS Vivobook ELAN1300
 
@@ -12,9 +14,8 @@ Ensure that the original VoodooI2C is working on your setup before using this fo
 
 :warning: __Please, do not post issues on the original VoodooI2C repo concerning this fork. alexandred and the contributors of VoodooI2C have nothing to do with it.__ :warning:
 
-I will not provide release of the kexts to avoid confusion with the original VoodooI2C.kext and its satellites.
 
-I made this fork especially for my ASUS Vivobook S15 X510UAR (8th gen i5 and 8gb ram).
+I made this fork especially for my ASUS Vivobook S15 X510UQ (8th gen i7 and 16gb ram).
 I only tested it on my own configuration, and this plugin is provided "as is" with no guarantee. Use it at your own risk!
 
 I know almost nothing about GPIO / ACPI / DSDT related issues and will not be able to provide any help for this.
@@ -100,3 +101,7 @@ You can then copy/paste the compiled `build/VoodooI2C.kext` and one of its satel
 ## License
 
 This program is protected by the GPL license. Please refer to the `LICENSE.txt` file for more information
+
+## Or download the latest release from this link
+
+(https://github.com/iGorEremenko/VoodooI2C-trackpad-Asus-Vivobook-S510UA-and-Asus-Vivobook-X510UQ/releases/tag/2.0)
