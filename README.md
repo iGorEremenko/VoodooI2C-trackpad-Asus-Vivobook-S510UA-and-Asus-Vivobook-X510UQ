@@ -103,5 +103,7 @@ You can then copy/paste the compiled `build/VoodooI2C.kext` and one of its satel
 This program is protected by the GPL license. Please refer to the `LICENSE.txt` file for more information
 
 ## Or download the latest release from this link
+:warning: __ Asus-Vivobook-X510UQ it's not the original driver, use with caution, I warned, well all klatu to Virat and what's next))) __ :warning:
+
 
 (https://github.com/iGorEremenko/VoodooI2C-trackpad-Asus-Vivobook-S510UA-and-Asus-Vivobook-X510UQ/releases/tag/2.0)
